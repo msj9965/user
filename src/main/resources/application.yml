@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/user_db?useSSL=false
+    username: msj9965
+    password: 12345678
+  jpa:
+    database: mysql
+    # InnoDB ??
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+
+jwt:
+  secret: c2xkZm5sbGVsZmVjdm1sc2RubGVscndlbnNkZnNkZmx3ZW5zbGRmbmxsZWxmZWN2bWxzZG5sZWxyd2Vuc2Rmc2RmbHdlbnNsZGZubGxlbGZlY3ZtbHNkbmxlbHJ3ZW5zZGZzZGZsd2Vuc2xkZm5sbGVsZmVjdm1sc2RubGVscndlbnNkZnNkZmx3ZW5zbGRmbmxsZWxmZWN2bWxzZG5sZWxyd2Vuc2Rmc2RmbHdlbnNsZGZubGxlbGZlY3ZtbHNkbmxlbHJ3ZW5zZGZzZGZsd2Vuc2xkZm5sbGVsZmVjdm1sc2RubGVscndlbnNkZnNkZmx3ZW4=
+  expiration:
+    access-token: 1800 # 30 minutes
+    refresh-token: 604800 # 1 week
